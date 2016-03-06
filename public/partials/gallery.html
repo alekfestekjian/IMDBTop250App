@@ -14,7 +14,7 @@
   </div>
   <div ng-repeat="movie in movies | filter:movies.genre | filter:{genre:genre}" class="small-6 medium-4 large-2 columns end text-center" id="movie">
         <a ng-href="#/details/{{movie.imdbID}}">
-          <img id="moviePics" ng-src="../data/images/{{movie.imdbID}}.jpg" alt="">
+          <img id="moviePics" ng-src="./data/images/{{movie.imdbID}}.jpg" alt="">
         </a>
   </div>
 </div>
