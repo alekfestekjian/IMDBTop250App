@@ -1,1 +1,68 @@
 // Add any custom Sass & CSS here
+#id1{
+  width: 100%;
+  display: table;
+  position: fixed;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  li{
+    float: right;
+    text-decoration: none;
+    list-style-type: none;
+  }
+  a {
+
+    display: table-cell;
+    vertical-align: middle;
+
+
+    float: left;
+    display: block;
+
+
+  }
+}
+#gallery{
+  #movie{
+    // -webkit-column-count: 7; /* Chrome, Safari, Opera */
+    // -moz-column-count: 7; /* Firefox */
+    // column-count: 7;
+    img{
+
+      height: 200px;
+      width: 150px;
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+    }
+  }
+}
+
+#list{
+  #curr_movie{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  img{
+    height: 150px;
+    width: 100px;
+  }
+}
+
+#details{
+  #movie-box{
+    img{
+      height: 150px;
+      width: 100px;
+    }
+  }
+
+}
+.listed{
+  li{
+    list-style-type: none;
+
+  }
+}

@@ -1,0 +1,20 @@
+<div id="gallery"class="row" ng-controller="galleryController">
+  <div class="small-12 columns text-center">
+    <a href="" ng-click = "genre=''" class="button tiny">All</a>
+    <a href="" ng-click = "genre='Action'" class="button tiny">Action</a>
+    <a href="" ng-click = "genre='Adventure'" class="button tiny">Adventure</a>
+    <a href="" ng-click = "genre='Comedy'" class="button tiny">Comedy</a>
+    <a href="" ng-click = "genre='Drama'" class="button tiny">Drama</a>
+    <a href="" ng-click = "genre='Musical'" class="button tiny">Musical</a>
+    <a href="" ng-click = "genre='Mystery'" class="button tiny">Mystery</a>
+    <a href="" ng-click = "genre='Romance'" class="button tiny">Romance</a>
+    <a href="" ng-click = "genre='Sci-Fi'" class="button tiny">Sci-Fi</a>
+    <a href="" ng-click = "genre='Thriller'" class="button tiny">Thriller</a>
+    <a href="" ng-click = "genre='Western'" class="button tiny">Western</a>
+  </div>
+  <div ng-repeat="movie in movies | filter:movies.genre | filter:{genre:genre}" class="small-6 medium-4 large-2 columns end text-center" id="movie">
+        <a ng-href="#/details/{{movie.imdbID}}">
+          <img id="moviePics" ng-src="../data/images/{{movie.imdbID}}.jpg" alt="">
+        </a>
+  </div>
+</div>
