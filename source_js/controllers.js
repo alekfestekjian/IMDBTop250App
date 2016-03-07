@@ -21,6 +21,7 @@ app.controller('listController', ['$scope','$http',function($scope,$http,$routeP
   error(function(data, status, headers, config) {
 
   });
+  $scope.orderProp = "rank";
 
 }]);
 
@@ -34,5 +35,4 @@ app.controller('detailsController', ['$scope', '$http','$routeParams',function($
 
   });
   $scope.imdbID = $routeParams.imdbID;
-
 }]);
