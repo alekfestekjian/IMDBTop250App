@@ -1,39 +1,40 @@
-<div id="list"class="row" ng-controller="listController">
-  <div class="small-8 small-centered columns">
-    <input type="search" ng-model="searched" placeholder="Search for movies...">
-    <span>Sort By:</span>
-    <select ng-model="orderProp">
-      <option value="rank">Rank</option>
-      <option value="title">Title</option>
-     </select>
-   <!-- name=”sortOrder” ng-model=”sortOrder” -->
-   <!-- name="sortOrder" ng-model="sortOrder" ng-value="false" checked -->
-   <!-- name="sortOrder" ng-model="sortOrder" value=reverse -->
-   <input name="reverse"type="radio" ng-click="isReverse = false" checked>Ascending
-   <input name="reverse"type="radio" ng-click="isReverse = true">Descending
+<div id="list" ng-controller="listController">
+  <div id="search-bar" class="row">
+    <div class="small-8 small-centered columns">
+      <input type="search" ng-model="searched" placeholder="Search for movies...">
+      <span>Sort By:</span>
+      <select ng-model="orderProp">
+        <option value="rank" selected>Rank</option>
+        <option value="title">Title</option>
+       </select>
 
-   <!-- <a href=""class="button tiny" ng-click="isReverse = false">Ascending</a> -->
-   <!-- <a href=""class="button tiny" ng-click="isReverse = true">Descending</a> -->
+     <input name="reverse"type="radio" ng-click="isReverse = false" checked>Ascending
+     <input name="reverse"type="radio" ng-click="isReverse = true">Descending
+    </div>
   </div>
-  <div id="searched" class="small-8 small-centered columns">
-    <ul class="listed">
-      <div>
-        <li ng-repeat="movie in movies | filter:searched | orderBy: orderProp: isReverse">
-          <a href="#/details/{{movie.imdbID}}">
-            <div class="row" id="curr_movie">
-              <div class="small-2 columns">
-                <img id="movies" ng-src="./data/images/{{movie.imdbID}}.jpg" alt="">
-              </div>
-              <div class="small-10 columns">
-                <p>{{movie.title}}</p>
-                <p>{{movie.rank}}</p>
-              </div>
+
+
+  <div id="results" class="row" >
+    <div id="searched" class="small-8 small-centered columns">
+      <ul class="listed">
+          <li id="list-element"ng-repeat="movie in movies | filter:searched | orderBy: orderProp: isReverse">
+            <div class="row" id="movie_lists">
+              <a id="curr_movie_link" href="#/details/{{movie.imdbID}}">
+                <div class="row" id="curr_movie">
+                  <div id="single_movie"class="small-2 columns">
+                    <img id="movies" ng-src="./data/images/{{movie.imdbID}}.jpg" alt="">
+                  </div>
+                  <div id="single_movie" class="small-10 columns">
+                    <p>{{movie.title}}</p>
+                    <p>Rank: {{movie.rank}}</p>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </li>
-      </div>
-
-    </ul>
+          </li>
+      </ul>
+    </div>
   </div>
+
 
 </div>

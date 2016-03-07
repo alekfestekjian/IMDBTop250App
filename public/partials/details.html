@@ -1,24 +1,33 @@
 <div id="details" ng-controller="detailsController">
   <div id="movie-box"class="small-8 small-centered column" ng-repeat="movie in movies | filter:imdbID">
-    <a class="small button" ng-href="#/details/{{movies[(movie.rank-2+movies.length)%movies.length].imdbID}}">Prev</a>
-    <a class="small button" ng-href="#/details/{{movies[movie.rank%movies.length].imdbID}}">Next</a>
-    <p>{{movie.title}}</p>
-    <p>{{movie.rank}}</p>
-    <div class="row">
-      <div class="small-4 column">
-        <img id="moviePics" ng-src="./data/images/{{movie.imdbID}}.jpg" alt="">
+    <div id="arrows" class="row">
+      <div class="small-6 text-left columns">
+          <a class="small button" ng-href="#/details/{{movies[(movie.rank-2+movies.length)%movies.length].imdbID}}">Prev</a>
       </div>
-      <div class="small-8 column">
-        <p>{{movie.runtime}}</p>
-        <p>{{movie.releaed}}</p>
-        <p>{{movie.awards}}</p>
-        <p>{{movie.plot}}</p>
+      <div class="small-6 text-right columns">
+        <a class="small button" ng-href="#/details/{{movies[movie.rank%movies.length].imdbID}}">Next</a>
       </div>
-
     </div>
 
+    <div id="titles" class="row">
+      <div id="sub_titles" class="small-4 columns text-left">
+        <span id="movie">{{movie.title}}</span>
+        <br>
+        <span id="rank">Rank: {{movie.rank}}</span>
+        <br>
+      </div>
+    </div>
 
-
+    <div id="content" class="row">
+      <div class="small-4 small columns text-center">
+        <img id="moviePics" ng-src="./data/images/{{movie.imdbID}}.jpg" alt="">
+      </div>
+      <div class="small-8 columns">
+        <p id="plot">{{movie.plot}}</p>
+        <p id="info">Released: {{movie.released}}</p>
+        <p id="info">Runtime: {{movie.runtime}}</p>
+        <p id="info">Awards Won: {{movie.awards}}</p>
+      </div>
+    </div>
   </div>
-
 </div>

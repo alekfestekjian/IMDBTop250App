@@ -1,35 +1,23 @@
 // Add any custom Sass & CSS here
-#id1{
-  width: 100%;
-  display: table;
-  position: fixed;
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+body{
+  #title{
+    #content{
+      h1{
+        font-family: $title;
+        font-size: 3em;
+      }
+    }
   }
-  li{
-    float: right;
-    text-decoration: none;
-    list-style-type: none;
-  }
-  a {
-
-    display: table-cell;
-    vertical-align: middle;
-
-
-    float: left;
-    display: block;
-
-
+  #buttons{
+    #nav{
+        font-family: $information;
+        font-size: 1em;
+    }
   }
 }
 #gallery{
   #movie{
-    // -webkit-column-count: 7; /* Chrome, Safari, Opera */
-    // -moz-column-count: 7; /* Firefox */
-    // column-count: 7;
+
     img{
 
       height: 200px;
@@ -40,25 +28,62 @@
   }
 }
 
-#list{
-  #curr_movie{
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-  }
+#results{
   img{
     height: 150px;
     width: 100px;
-  }
-}
 
-#details{
-  #movie-box{
-    img{
-      height: 150px;
-      width: 100px;
+  }
+  #curr_movie{
+
+    background: $background-blue;
+    border: 1px black;
+    border-style: solid none none none;
+    #single_movie{
+      margin-top: 1em;
+      margin-bottom: 1em;
     }
   }
+}
+#details{
+  #movie-box{
 
+    img{
+      height: 200px;
+      width: 150px;
+    }
+    #content{
+      padding-bottom: 1em;
+      margin-bottom: 1em;
+      background: $background-blue;
+      #info{
+        font-family: $information;
+        color: $white;
+      }
+      #plot{
+        font-family: $information;
+        color: $arrow-grey;
+      }
+    }
+    #titles{
+      background: $background-blue;
+      #sub_titles{
+        font-family: $title;
+        color: $header;
+        padding-bottom: .5em;
+        text-align: center;
+      }
+
+    }
+    #arrows{
+      margin-top: 1em;
+      padding-top: 1em;
+      background: $background-blue;
+      a{
+        background: $arrow-grey;
+      }
+    }
+  }
 }
 .listed{
   li{
