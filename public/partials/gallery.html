@@ -1,16 +1,26 @@
 <div id="gallery"class="row" ng-controller="galleryController">
   <div class="small-12 columns text-center">
-    <a href="" ng-click = "genre=''" class="button small">All</a>
-    <a href="" ng-click = "genre='Action'" class="button small">Action</a>
-    <a href="" ng-click = "genre='Adventure'" class="button small">Adventure</a>
-    <a href="" ng-click = "genre='Comedy'" class="button small">Comedy</a>
-    <a href="" ng-click = "genre='Drama'" class="button small">Drama</a>
-    <a href="" ng-click = "genre='Musical'" class="button small">Musical</a>
-    <a href="" ng-click = "genre='Mystery'" class="button small">Mystery</a>
-    <a href="" ng-click = "genre='Romance'" class="button small">Romance</a>
-    <a href="" ng-click = "genre='Sci-Fi'" class="button small">Sci-Fi</a>
-    <a href="" ng-click = "genre='Thriller'" class="button small">Thriller</a>
-    <a href="" ng-click = "genre='Western'" class="button small">Western</a>
+    <a href="" ng-click = "genre=''" class="button tiny">All</a>
+    <a href="" ng-click = "genre='Action'" class="button tiny">Action</a>
+    <a href="" ng-click = "genre='Adventure'" class="button tiny">Adventure</a>
+    <a href="" ng-click = "genre='Animation'" class="button tiny">Animation</a>
+    <a href="" ng-click = "genre='Biography'" class="button tiny">Biography</a>
+    <a href="" ng-click = "genre='Comedy'" class="button tiny">Comedy</a>
+    <a href="" ng-click = "genre='Crime'" class="button tiny">Crime</a>
+    <a href="" ng-click = "genre='Drama'" class="button tiny">Drama</a>
+    <a href="" ng-click = "genre='Family'" class="button tiny">Family</a>
+    <a href="" ng-click = "genre='Film-Noir'" class="button tiny">Film-Noir</a>
+    <a href="" ng-click = "genre='History'" class="button tiny">History</a>
+    <a href="" ng-click = "genre='Horro'" class="button tiny">Horror</a>
+    <a href="" ng-click = "genre='Musical'" class="button tiny">Musical</a>
+    <a href="" ng-click = "genre='Mystery'" class="button tiny">Mystery</a>
+    <a href="" ng-click = "genre='Romance'" class="button tiny">Romance</a>
+    <a href="" ng-click = "genre='Sci-Fi'" class="button tiny">Sci-Fi</a>
+    <a href="" ng-click = "genre='Sport'" class="button tiny">Sport</a>
+    <a href="" ng-click = "genre='Thriller'" class="button tiny">Thriller</a>
+    <a href="" ng-click = "genre='War'" class="button tiny">War</a>
+    <a href="" ng-click = "genre='Western'" class="button tiny">Western</a>
+
   </div>
   <div ng-repeat="movie in movies | filter:movies.genre | filter:{genre:genre}" class="small-6 medium-4 large-2 columns end text-center" id="movie">
         <a ng-href="#/details/{{movie.imdbID}}">
